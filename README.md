@@ -8,3 +8,4 @@ Additionally, it scans for vulnerabilities which are placed in a seperate file.
 (This script is very helpful when scanning a network as apposed to a single machine, but I still like to use it when doing CTF's).
 
 
+``MAKE SURE TO MAKE THE FILE EXECUTABLE BEFORE RUNNING``
