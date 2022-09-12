@@ -1,4 +1,5 @@
 #!/bin/bash
+#by @jacvbtaylor
  
 echo "sed -e '/Discovered/d;/Increasing/d;/closed/d;/Completed/d;/Initiating/d;/Starting/d;/Not/d;/Nmap/d'" > SED && chmod +x SED
 printf "enter the ip\n\n"
