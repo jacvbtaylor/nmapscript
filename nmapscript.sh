@@ -5,5 +5,5 @@ printf "enter the ip\n\n"
 read IP 
 echo "${IP}" > host\
 && nmap -sn -v -iL host -oG - | awk '/Up$/{print$2}' > livehosts.txt && rm host\
-&& nmap -v -iL livehosts.txt | ./SED > nmapscan.txt\
-&& nmap -sV -A --script vulners -iL livehost* | ./SED > vulnscan.txt && rm SED
+&& nmap -v -iL livehosts.txt | ./SED >> nmapscan.txt\
+&& nmap -sV -A --script vulners -iL livehost* | ./SED >> vulnscan.txt && rm SED
