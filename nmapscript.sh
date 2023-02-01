@@ -12,6 +12,4 @@ echo "${IP}" > host\
 && nmap -sn -v -iL host -oG - | awk '/Up$/{print$2}' > livehosts.txt &&\
 printf "${GREEN}\n\n\n[x]Found live host, scanning now[x]\n\n\n${ENDCOLOR}" && echo "_______________________________" &&\
 rm host && nmap -v -iL livehosts.txt | ./SED >> scan.txt && printf "${RED}\n\n~~~~Port scan is now complete~~~~\n\n${ENDCOLOR}" \
-&& cat scan.txt && printf "${GREEN}\n\n\n~~~~Checking for vulnerabilities~~~~\n\n\n${ENDCOLOR}" &&\
-nmap -sV -A --script=vuln -iL livehost* | ./SED >> vuln.txt &&\
-rm SED && printf "${RED}\n\n\n[x]vulnerability scan is now complete[x]\nPlease review the vuln.txt file.${ENDCOLOR}"
+&& cat scan.txt && rm SED 
